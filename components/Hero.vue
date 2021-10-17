@@ -4,19 +4,19 @@
         <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
             <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
             <span class="block xl:inline">Data to enrich your</span>
-            <span class="block text-brand xl:inline">online business</span>
+            <span class="block text-blue xl:inline">online business</span>
             </h1>
             <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
             </p>
             <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
             <div class="rounded-md shadow">
-                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand hover:bg-shadow md:py-4 md:text-lg md:px-10">
+                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue hover:bg-shadow md:py-4 md:text-lg md:px-10">
                 Get started
                 </a>
             </div>
             <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-brand bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                 Live demo
                 </a>
             </div>
@@ -33,7 +33,7 @@
 export default {
     data() {
         return {
-            pic: require('../assets/1.jpeg')
+            pic: require('../assets/red2.jpeg')
         }
     }
 }
