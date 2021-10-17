@@ -1,6 +1,6 @@
 <template>
-    <div class="relative py-16 bg-white">
-    <div class="hidden absolute top-0 inset-x-0 h-1/2 bg-gray-50 lg:block" aria-hidden="true"></div>
+    <div class="relative py-16 bg-white rounded-2xl">
+    <div class="rounded-2xl hidden absolute top-0 inset-x-0 h-1/2 bg-gray-50 lg:block" aria-hidden="true"></div>
     <div class="max-w-7xl mx-auto bg-brand lg:bg-transparent lg:px-8">
         <div class="lg:grid lg:grid-cols-12">
         <div class="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent">

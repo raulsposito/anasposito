@@ -24,7 +24,7 @@
                 <rect x="118" width="404" height="784" fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)" />
             </svg>
             <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-                <button type="button" class="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">
+                <button type="button" class="relative block w-full bg-white rounded-2xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand">
                 <span class="sr-only">Watch our video to learn more</span>
                 <img class="w-full" :src="pic" alt="ana">
                 <div class="absolute inset-0 w-full h-full flex items-center justify-center" aria-hidden="true">

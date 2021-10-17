@@ -1,6 +1,6 @@
 <template>
     <main class="lg:relative">
-        <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
+        <div class="fadeIn mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
         <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
             <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
             <span class="block xl:inline">Data to enrich your</span>
@@ -24,17 +24,123 @@
         </div>
         </div>
         <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-        <img class="absolute inset-0 w-full h-full object-cover" :src="pic" alt="picture of ana">
+        <img class="absolute rounded-3xl inset-0 w-full h-full object-cover" :src="pic" alt="picture of ana">
         </div>
     </main>
 </template>
 
 <script>
+import lax from 'lax.js'
+
 export default {
     data() {
         return {
             pic: require('../assets/red2.jpeg')
         }
-    }
+    },
+    mounted() {
+        lax.init()
+        lax.addDriver('scrollY', function () {
+        return window.scrollY
+        })
+        lax.addElements('.fadeIn', {
+        scrollY: {
+            opacity: [
+            [0, 100],
+            [0, 1],
+            ],
+        },
+        })
+        lax.addElements('.scrolldown', {
+        scrollY: {
+            'letter-spacing': [
+            [0, 'screenHeight*0.75'],
+            [0, 150],
+            {
+                cssUnit: 'px',
+            },
+            ],
+            opacity: [
+            [0, 100],
+            [1, 0],
+            ],
+            translateX: [
+            [0, 'screenHeight'],
+            [0, 80],
+            ],
+        },
+        })
+        lax.addElements('.fadeOut', {
+        scrollY: {
+            opacity: [
+            [0, 100],
+            [1, 0],
+            ],
+        },
+        })
+        lax.addElements('.letter-x', {
+        scrollY: {
+            translateY: [
+            [-400, 0],
+            [100, 0],
+            ],
+            translateX: [
+            [220, 'screenHeight'],
+            [0, 400],
+            ],
+            opacity: [
+            [0, 100],
+            [0, 1],
+            ],
+        },
+        })
+        lax.addElements('.letter-a', {
+        scrollY: {
+            translateY: [
+            [-400, 0],
+            [200, 0],
+            ],
+            translateX: [
+            [220, 'screenHeight'],
+            [0, -400],
+            ],
+            opacity: [
+            [0, 100],
+            [0, 1],
+            ],
+        },
+        })
+        lax.addElements('.downarrows', {
+        scrollY: {
+            translateY: [
+            [0, 75],
+            [0, 200],
+            ],
+            opacity: [
+            [0, 100],
+            [1, 0],
+            ],
+        },
+        })
+        lax.addElements('.grow', {
+        scrollY: {
+            scale: [
+            [30, 100],
+            [0.3, 1],
+            ],
+        },
+        })
+    },
+    beforeUnmount() {
+    lax.removeElements(
+      '.fadeIn',
+      '.grow',
+      '.downarrows',
+      '.letter-a',
+      '.letter-x',
+      '.fadeOut',
+      '.scrolldown'
+    )
+  },
 }
 </script>
